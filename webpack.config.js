@@ -5,7 +5,7 @@ module.exports = {
   entry: './client/index.js',
   mode: 'development',
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './Client/dist'),
     filename: 'index_bundle.js',
   },
   target: 'web',
