@@ -1,11 +1,11 @@
 const axios = require('axios');
 
-const getVillagers = () => {
+const getInfo = (url) => {
   var option = {
     method: 'GET',
-    url: 'http://acnhapi.com/v1/villagers'
+    url: url
   }
   return axios(option);
 }
 
-module.exports.getVillagers = getVillagers;
+module.exports.getInfo = getInfo;

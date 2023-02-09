@@ -5,15 +5,13 @@ const MainLayout = () => {
   return (
     <>
       <nav>
-        <ul>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='Villagers'>Villagers</Link></li>
-          <li><Link to='Sea'>Sea</Link></li>
-          <li><Link to='Fish'>Fish</Link></li>
-          <li><Link to='Bugs'>Bugs</Link></li>
-          <li><Link to='Art'>Art</Link></li>
-          <li><Link to='Furniture'>Furniture</Link></li>
-        </ul>
+          <a><Link to='/'>Home</Link></a>
+          <a><Link to='Villagers'>Villagers</Link></a>
+          <a><Link to='Sea'>Sea</Link></a>
+          <a><Link to='Fish'>Fish</Link></a>
+          <a><Link to='Bugs'>Bugs</Link></a>
+          <a><Link to='Art'>Art</Link></a>
+          <a><Link to='Furniture'>Furniture</Link></a>
       </nav>
       <Outlet />
     </>
