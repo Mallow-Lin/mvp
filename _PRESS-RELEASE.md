@@ -1,4 +1,4 @@
-# Project Name #
+# Animal Crossing: New Horizons Mini Tour #
 
 <!--
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -27,7 +27,7 @@ Once the project moves into development, the press release can be used as a touc
   Our ACNH Mini Tour app can provide the ultimate reference on everything to a new resident, we'll get you settled in on your new island home as quickly as possible. Create your paradise, introduce your critter villagers, discover and explore the island features. Here, you'll get the perfect guide for getting the most out of island life.
 
 ## Problem ##
-  > You can browse and get information on any villagers, bugs, fish, sea creature, art, funiture etc
+  > You can browse and get information on any villagers, bugs, fish, sea creatures, art, funiture etc
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.

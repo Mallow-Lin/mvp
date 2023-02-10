@@ -1,0 +1,19 @@
+
+.outterPopup {
+  background: rgba(0, 0, 0, 0.25);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  background-color: antiquewhite;
+}
+
+.innerPopup {
+  margin: 70px auto;
+  padding: 20px;
+  background:p;
+  border-radius: 5px;
+  width: 30%;
+  position:absolute;
+  transition: all 5s ease-in-out;
+}
+

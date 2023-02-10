@@ -18,32 +18,31 @@ let villagersSchema = mongoose.Schema({
 let Villagers = mongoose.model('Villagers', villagersSchema);
 
 let save = (villagers) => {
-  for (let member in villagers) {
-    Villagers.findOne({id: villagers[member].id})
-      .then((result) => {
-        if (result) {
-          // console.log('user saved already');
-        } else {
-          var newMember = new Villagers ({
-            id: villagers[member].id,
-            fileName: villagers[member]['file-name'],
-            EnglishName: villagers[member].name['name-USen'].toLowerCase(),
-            SpanishName: villagers[member].name['name-USes'].toLowerCase(),
-            ChineseName: villagers[member].name['name-CNzh'],
-            JapaneseName: villagers[member].name['name-JPja'],
-            KoreanName: villagers[member].name['name-KRko'],
-            icon: villagers[member].icon_uri,
-          })
-          return newMember.save((err) => {
-            if (err) {
-              console.log('save failed', err);
-            } else {
-              // console.log('save successfully');
-            }
-          })
-        }
-      })
-  }
+  return new Promise((resolve, reject) => {
+    for (let member in villagers) {
+      Villagers.findOne({id: villagers[member].id})
+        .then((result) => {
+          if (result) {
+            reject('villager saved already');
+          } else {
+            var newMember = new Villagers ({
+              id: villagers[member].id,
+              fileName: villagers[member]['file-name'],
+              EnglishName: villagers[member].name['name-USen'].toLowerCase(),
+              SpanishName: villagers[member].name['name-USes'].toLowerCase(),
+              ChineseName: villagers[member].name['name-CNzh'],
+              JapaneseName: villagers[member].name['name-JPja'],
+              KoreanName: villagers[member].name['name-KRko'],
+              icon: villagers[member].icon_uri,
+            })
+            resolve(newMember.save())
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+    }
+  })
 }
 
 let interestSchema = mongoose.Schema({
@@ -66,10 +65,11 @@ let interestSchema = mongoose.Schema({
 let interestVillager = mongoose.model('interestVillager', interestSchema);
 
 let interestSave = (villager) => {
-  interestVillager.findOne({id: villager.id})
+  return new Promise ((resolve, reject) => {
+    interestVillager.findOne({id: villager.id})
       .then((result) => {
         if (result) {
-          // console.log('user saved already');
+          // reject('villager saved already');
         } else {
           var newMember = new interestVillager ({
             id: villager.id,
@@ -88,16 +88,14 @@ let interestSave = (villager) => {
             Hobby: villager.hobby,
             CatchPhrase: villager.saying
           })
-          return newMember.save((err) => {
-            if (err) {
-              console.log('save failed', err);
-            } else {
-              // console.log('save successfully');
-            }
-          })
+          resolve(newMember.save());
         }
-  })
-}
+      })
+      .catch((err) => {
+        reject(err);
+      })
+    })
+  }
 module.exports.save = save;
 module.exports.Villagers = Villagers;
 

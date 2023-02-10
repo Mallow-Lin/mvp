@@ -15,7 +15,7 @@
     "url": "git+https://github.com/Mallow-Lin/rpp2210-mvp.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mallow Lin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Mallow-Lin/rpp2210-mvp/issues"
@@ -39,7 +39,9 @@
     "jquery": "^3.6.3",
     "mongoose": "^6.9.1",
     "react": "^18.2.0",
+    "react-dialogbox": "^1.4.2",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.1"
+    "react-router-dom": "^6.8.1",
+    "reactjs-popup": "^2.0.5"
   }
 }

@@ -55,15 +55,6 @@ const Villagers = () => {
       error: (err) => {
         document.querySelector('.errorMessage').innerHTML="Sorry, we cannot find this villager, please try again";
       }
-      //   console.log('datadata', id)
-      //   setInterest(data);
-      //   if (!popup) {
-      //     showPopup(true);
-      //   }
-      // },
-      // error: (err) => {
-      //   document.querySelector('.errorMessage').innerHTML="Sorry, we cannot find this villager, please try again";
-      // }
     })
   }
   const innerGetRequest = (id) => {
@@ -85,7 +76,7 @@ const Villagers = () => {
       <main>
         <div>{villagers.map((villager) => {
           return (
-            <button style={{width: 220, margin: 40}} onClick={() => {showPopup(true); searchVillager(villager.id)}}>
+            <button style={{width:300, margin: 40}} onClick={() => {showPopup(true); searchVillager(villager.id)}}>
               <img src={villager.icon} />
               <div>{villager.EnglishName} / {villager.SpanishName} / {villager.ChineseName}</div>
               <div>{villager.JapaneseName} / {villager.KoreanName}</div>
@@ -94,7 +85,22 @@ const Villagers = () => {
         })}</div>
       </main>
     </div>
-    <Popup popup={popup} showPopup={showPopup} villager={interest}></Popup>
+    <Popup popup={popup} showPopup={showPopup}>
+      <img src={interest.image} />
+      <ul>
+        <li>My English Name is: {interest.EnglishName}</li>
+        <li>My Spainish Name is: {interest.SpanishName}</li>
+        <li>My Chinese Name is: {interest.ChineseName}</li>
+        <li>My Japanese Name is: {interest.JapaneseName}</li>
+        <li>My Korean Name is: {interest.KoreanName}</li>
+        <li>Personality: {interest.Personality}</li>
+        <li>Birthday: {interest.Birthday}</li>
+        <li>Species: {interest.Species}</li>
+        <li>Gender: {interest.Gender}</li>
+        <li>Hobby: {interest.Hobby}</li>
+        <li>Catch phrase: {interest.CatchPhrase}</li>
+      </ul>
+    </Popup>
     </div>
 
   )
