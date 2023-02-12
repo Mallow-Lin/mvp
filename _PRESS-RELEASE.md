@@ -17,29 +17,30 @@ Once the project moves into development, the press release can be used as a touc
  -->
 
 ## Heading ##
-  > Animal Crossing: New Horizons Mini Tour
+  > Animal Crossing: New Horizons Mini Pedia
 
 ## Sub-Heading ##
-  > ACNH Mini Tour is a companion app for Animal Crossing: New Horizons, you'll get the perfect guide for getting the most out of island life.
+  > ACNH Mini Pedia is a companion app for Animal Crossing: New Horizons, you'll get the perfect guide for getting the most out of island life.
 
 ## Summary ##
   > Animal Crossing is a social simulation video game series developed and published by Nintendo, the player assumes the role of a human character who moves into a rural village populated with anthropomorphic animals and lives there indefinitely.
   Our ACNH Mini Tour app can provide the ultimate reference on everything to a new resident, we'll get you settled in on your new island home as quickly as possible. Create your paradise, introduce your critter villagers, discover and explore the island features. Here, you'll get the perfect guide for getting the most out of island life.
 
 ## Problem ##
-  > You can browse and get information on any villagers, bugs, fish, sea creatures, art, funiture etc
+  > You can browse and get information on any villagers, fish, art, song etc
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > Our ACNH Mini Tour app can provide the ultimate reference on everything to a new resident, we'll get you settled in on your new island home as quickly as possible.
 
 ## Quote from You ##
   > Your one-stop guide to a perfect island vacation is right here!
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Simply click on each navigation tab, it will gives you plenty of useful information.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > Makes me want to get the game.
+SO COOL all the languages is such a nice touch.
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > It is time to start your animal crossing journey with us.

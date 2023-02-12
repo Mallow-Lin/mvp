@@ -29,7 +29,7 @@ let save = (fishes) => {
       Fishes.findOne({id: fishes[fish].id})
         .then((result) => {
           if (result) {
-            reject('fish saved already')
+            reject('fish saved already');
           } else {
             var newFish = new Fishes ({
               id: fishes[fish].id,
@@ -47,12 +47,12 @@ let save = (fishes) => {
               price: fishes[fish].price,
               catchPharse: fishes[fish]['catch-phrase']
             })
-            resolve(newFish.save())
-          }
+            resolve(newFish.save());
+        }
       })
     }
   })
-};
+}
 
 module.exports.save = save;
 module.exports.Fishes = Fishes;

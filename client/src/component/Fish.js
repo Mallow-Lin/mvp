@@ -29,12 +29,12 @@ const Fish = () => {
 
   return (
     <div>
-      <div style={{'textAlign': 'center'}}>
+      <div style={{'textAlign': 'center', backgroundImage: "url(" + "https://images4.alphacoders.com/102/1024173.png" + ")", width: '100vw', height: '100vh', 'overflow-y': 'scroll'}}>
         <h1>Fish</h1>
         <main>
           <div>{fishes.map((fish) => {
             return (
-              <button style={{width: 300, margin: 40}} onClick={() => {showPopup(true); setInterest(fish); Popup(interest);}}>
+              <button style={{width:300, margin: 40, 'border-radius': 40}} onClick={() => {showPopup(true); setInterest(fish); Popup(interest);}}>
                 <img src={fish.icon} />
                 <div>{fish.EnglishName} / {fish.SpanishName} / {fish.ChineseName}</div>
                 <div>{fish.JapaneseName} / {fish.KoreanName}</div>
@@ -44,18 +44,13 @@ const Fish = () => {
         </main>
       </div>
       <Popup popup={popup} showPopup={showPopup}>
-        <img src={interest.image} style={{height: '80%', width: '80%'}}/>
+        <img src={interest.image} style={{height: '60%', width: '60%'}}/>
         <ul>
-          <li>My English Name is: {interest.EnglishName}</li>
-          <li>My Spainish Name is: {interest.SpanishName}</li>
-          <li>My Chinese Name is: {interest.ChineseName}</li>
-          <li>My Japanese Name is: {interest.JapaneseName}</li>
-          <li>My Korean Name is: {interest.KoreanName}</li>
-          <li>You can see me at {interest.northernAvailability} months at Northern</li>
-          <li>ou can see me at {interest.southernAvailability} months at Southern</li>
-          <li>I am a {interest.location} fish</li>
-          <li>I can be sold at ${interest.price}</li>
-          <li>Villager caught me would likely to say: {interest.catchPharse}</li>
+          <div>My English name is: {interest.EnglishName}, my Spainish name is: {interest.SpanishName}, my Chinese name is: {interest.ChineseName}, my Japanese Name is: {interest.JapaneseName}, my Korean Name is: {interest.KoreanName}
+          </div>
+          <div>You can see me at months {interest.northernAvailability} at Northern, you can see me at months {interest.southernAvailability} at Southern</div>
+          <div>I am a {interest.location} fish, I can be sold at ${interest.price}</div>
+          <div>Villager caught me would likely to say: {interest.catchPharse}</div>
         </ul>
       </Popup>
     </div>

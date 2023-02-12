@@ -7,7 +7,7 @@ import Song from './component/Song.js';
 import Fish from './component/Fish.js';
 import Bugs from './component/Bugs.js';
 import Art from './component/Art.js';
-import Furniture from './component/Furniture.js';
+// import Furniture from './component/Furniture.js';
 
 const Router = () => {
   let element = useRoutes([

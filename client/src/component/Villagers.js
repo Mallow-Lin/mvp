@@ -8,8 +8,6 @@ const Villagers = () => {
   const [popup, showPopup] = useState(false);
   const [interest, setInterest] = useState({});
   const [term, setTerm] = useState('');
-  console.log('interest', interest)
-
 
   const fetchVillagers = () => {
     $.ajax({
@@ -67,16 +65,18 @@ const Villagers = () => {
       }
     })
   }
+
   return (
-    <div>
-    <div style={{'textAlign': 'center'}}>
-      <h1>Here's our Villagers</h1>
-      <input onChange={(e) => {setTerm(e.target.value)}} /><button onClick={searchName}>Search</button>
-      <p className='errorMessage' style={{color: 'red'}}></p>
-      <main>
+    <div style={{'textAlign': 'center', backgroundImage: "url(" + "https://images5.alphacoders.com/956/956578.jpg" + ")", width: '100vw', height: '100vh', 'overflow-y': 'scroll'}}>
+      <div style={{position: 'fixed', marginTop:60, marginLeft: '45%'}}>
+        <h1 style={{fontSize: 30, color: '#fcea64'}}>Here's our Villagers</h1>
+        <input onChange={(e) => {setTerm(e.target.value)}} /><button onClick={searchName}>Search</button>
+        <p className='errorMessage' style={{color: 'red'}}></p>
+      </div>
+      <main style={{marginTop: 150}}>
         <div>{villagers.map((villager) => {
           return (
-            <button style={{width:300, margin: 40}} onClick={() => {showPopup(true); searchVillager(villager.id)}}>
+            <button style={{width:300, margin: 40, 'border-radius': 40}} onClick={() => {showPopup(true); searchVillager(villager.id)}}>
               <img src={villager.icon} />
               <div>{villager.EnglishName} / {villager.SpanishName} / {villager.ChineseName}</div>
               <div>{villager.JapaneseName} / {villager.KoreanName}</div>
@@ -84,25 +84,17 @@ const Villagers = () => {
           )
         })}</div>
       </main>
-    </div>
-    <Popup popup={popup} showPopup={showPopup}>
-      <img src={interest.image} />
-      <ul>
-        <li>My English Name is: {interest.EnglishName}</li>
-        <li>My Spainish Name is: {interest.SpanishName}</li>
-        <li>My Chinese Name is: {interest.ChineseName}</li>
-        <li>My Japanese Name is: {interest.JapaneseName}</li>
-        <li>My Korean Name is: {interest.KoreanName}</li>
-        <li>Personality: {interest.Personality}</li>
-        <li>Birthday: {interest.Birthday}</li>
-        <li>Species: {interest.Species}</li>
-        <li>Gender: {interest.Gender}</li>
-        <li>Hobby: {interest.Hobby}</li>
-        <li>Catch phrase: {interest.CatchPhrase}</li>
-      </ul>
-    </Popup>
-    </div>
 
+      <Popup popup={popup} showPopup={showPopup}>
+        <img src={interest.image} style={{marginTop: 20}}/>
+        <div style={{marginTop: 30, color: '#786951', fontSize: 20}}>Hello everyone! My English name is: {interest.EnglishName}, my Spainish name is: {interest.SpanishName}, my Chinese name is: {interest.ChineseName}, my Japanese name is: {interest.JapaneseName}, my Korean name is: {interest.KoreanName}</div>
+        <div style={{marginTop: 30, fontSize: 20, color:'#017c74'}}>
+          <div>I am very {interest.Personality}, my hobby is {interest.Hobby}</div>
+          <div>My birthday is {interest.Birthday}, I am a/an {interest.Species}</div>
+          <div>I like to say "{interest.CatchPhrase}"</div>
+        </div>
+      </Popup>
+    </div>
   )
 }
 

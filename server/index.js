@@ -33,7 +33,7 @@ app.get('/Villagers/get', (req, res) => {
     const id = req.query.id;
     API.getInfo(`http://acnhapi.com/v1/villagers/${id}`)
       .then((data) => {
-        villagerDB.interestSave(data.data);
+        return villagerDB.interestSave(data.data);
       })
       .catch((err) => {
         console.log('err getting villager', err);
@@ -48,7 +48,7 @@ app.get('/Villagers/get', (req, res) => {
         var id = data[0].id
         API.getInfo(`http://acnhapi.com/v1/villagers/${id}`)
           .then((villager) => {
-            villagerDB.interestSave(villager.data);
+            return villagerDB.interestSave(villager.data);
           })
           .catch((err) => {
             console.log('err getting data', err);
